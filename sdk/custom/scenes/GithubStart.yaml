@@ -1,0 +1,19 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: create_github_repository
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: Seems like you want to create a repository. What name would you
+              like to use?
+slots:
+- commitBehavior:
+    writeSessionParam: project_name_slot
+  name: project_name_slot
+  required: true
+  type:
+    name: project_name

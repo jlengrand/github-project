@@ -1,4 +1,5 @@
 handlers:
 - name: start_scene_initial_prompt
+- name: create_github_repository
 inlineCloudFunction:
   executeFunction: ActionsOnGoogleFulfillment
