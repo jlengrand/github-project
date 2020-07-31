@@ -8,12 +8,33 @@ onEnter:
     - promptResponse:
         firstSimple:
           variants:
-          - speech: Seems like you want to create a repository. What name would you
-              like to use?
+          - speech: Alright let us create a repository!
 slots:
 - commitBehavior:
     writeSessionParam: project_name_slot
   name: project_name_slot
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: What name would you like to use for your repo?
   required: true
   type:
     name: project_name
+- commitBehavior:
+    writeSessionParam: project_type_slot
+  name: project_type_slot
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: Would you like a Java or Typescript project?
+  required: true
+  type:
+    name: project_type

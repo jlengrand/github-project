@@ -1,0 +1,9 @@
+synonym:
+  entities:
+    java:
+      synonyms:
+      - java
+    typescript:
+      synonyms:
+      - typescript
+  matchType: FUZZY_MATCH
