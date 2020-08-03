@@ -78,4 +78,3 @@ app.handle('create_github_repository', (conv) => {
 });
 
 exports.ActionsOnGoogleFulfillment = functions.https.onRequest(app);
-
